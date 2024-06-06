@@ -1,4 +1,4 @@
-# My Marvel App
+#  Marvel App
 Este é um projeto de teste de front-end que utiliza a API da Marvel para exibir informações sobre personagens, quadrinhos e muito mais.
 
 # Instalação
@@ -9,7 +9,7 @@ Após a instalação do Yarn, siga estas etapas:
 Clone este repositório em sua máquina local usando o seguinte comando:
 
 ```bash
-git clone https://github.com/seu-usuario/my-marvel-app.git
+git clone https://github.com/gabrielcabral/marvel-app.git
 ```
 Navegue até o diretório do projeto:
 
