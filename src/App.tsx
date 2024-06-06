@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
+import ListaDePersonagens from './components/ListaDePersonagens';
+import CharacterDetails from './components/CharacterDetails';
+import MainLayout from './layout/MainLayout';
 
-function App() {
+const AppContainer = styled.div`
+  background: var(--gray-900);
+  color: var(--gray-300);
+  
+  display: flex;
+ 
+`;
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <AppContainer>
+        <MainLayout>
+        <Routes>
+          <Route path="/" element={<ListaDePersonagens />} />
+          <Route path="/character/:characterId" element={<CharacterDetails />} />
+        </Routes></MainLayout>
+      </AppContainer>
+    </Router>
   );
 }
 
-export default App;
