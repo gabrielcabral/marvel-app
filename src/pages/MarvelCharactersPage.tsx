@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchCharacters } from './api'; // Supondo que existe uma função fetchCharacters na API para buscar os personagens
+import { fetchCharacters } from './api';
 
 const MarvelCharactersPage = () => {
   const [characters, setCharacters] = useState([]);
@@ -14,7 +14,7 @@ const MarvelCharactersPage = () => {
   useEffect(() => {
     async function fetchCharactersData() {
       try {
-        const response = await fetchCharacters(currentPage, searchTerm); // Função para buscar os personagens da API com suporte a paginação e filtragem
+        const response = await fetchCharacters(currentPage, searchTerm); 
         setCharacters(response);
         setLoading(false);
       } catch (error) {
